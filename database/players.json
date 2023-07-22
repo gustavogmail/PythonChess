@@ -1,11 +1,20 @@
 [
   {
-    "name": "Gustavo"
+    "name": "Gustavo",
+    "last_name": "Saudade",
+    "date_of_birth": "1986-06-06",
+    "national_chess_id": "AB12345"
   },
   {
-    "name": "Grazi"
+    "name": "Julia",
+    "last_name": "Roberts",
+    "date_of_birth": "1981-08-12",
+    "national_chess_id": "AB54321"
   },
   {
-    "name": "Zaid"
+    "name": "Antonio",
+    "last_name": "Bandeiras",
+    "date_of_birth": "1974-10-28",
+    "national_chess_id": "AB98765"
   }
 ]

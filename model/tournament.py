@@ -1,7 +1,5 @@
 class Tournament:
-    def __init__(self, name, venue, start_date,
-                 end_date, current_round,
-                 players, description, rounds=4):
+    def __init__(self, name, venue, start_date, end_date, current_round, players, description, rounds=4):
         self.name = name
         self.venue = venue
         self.start_date = start_date

@@ -23,6 +23,36 @@
         "last_name": "Bandeiras",
         "date_of_birth": "1974-10-28",
         "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Jennifer",
+        "last_name": "Lopes",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Leonardo",
+        "last_name": "Di Caprio",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Silvester",
+        "last_name": "Stallone",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Amy",
+        "last_name": "Whynehouse",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Michael",
+        "last_name": "Jackson",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
       }
     ],
     "description": "The biggest tournament in the world",
@@ -52,6 +82,24 @@
         "last_name": "Bandeiras",
         "date_of_birth": "1974-10-28",
         "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Penelope",
+        "last_name": "Cruz",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Hector",
+        "last_name": "Bonilha",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Edson",
+        "last_name": "Arantes do Nascimento",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
       }
     ],
     "description": "The biggest tournament in the USA",
@@ -79,6 +127,12 @@
       {
         "name": "Antonio",
         "last_name": "Bandeiras",
+        "date_of_birth": "1974-10-28",
+        "national_chess_id": "AB98765"
+      },
+      {
+        "name": "Jhonny",
+        "last_name": "Cash",
         "date_of_birth": "1974-10-28",
         "national_chess_id": "AB98765"
       }

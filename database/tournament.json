@@ -56,7 +56,7 @@
       }
     ],
     "description": "The biggest tournament in the world",
-    "rounds": 4
+    "number_of_rounds": 3
   },
   {
     "name": "National Cup",
@@ -103,7 +103,7 @@
       }
     ],
     "description": "The biggest tournament in the USA",
-    "rounds": 2
+    "number_of_rounds": 2
   },
   {
     "name": "Regional Cup",
@@ -138,6 +138,6 @@
       }
     ],
     "description": "The biggest tournament of California",
-    "rounds": 3
+    "number_of_rounds": 1
   }
 ]

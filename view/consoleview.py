@@ -16,6 +16,16 @@ class ConsoleView:
         print(tabulate(table, headers="keys", tablefmt="pretty"))
 
     @staticmethod
+    def show_all_matches_and_rounds(tournament):
+        tournament_rounds = [round for round in tournament.rounds]
+        tournament_matches = []
+        for current_round in tournament_rounds:
+            for match in current_round.matches:
+                tournament_matches.append(match.to_dict())
+            print(f"Matches of {current_round.name}: ")
+            print(tabulate(tournament_matches, headers="keys", tablefmt="pretty"))
+
+    @staticmethod
     def show_tournament(tournament):
         table = []
         info_tournament = {
@@ -36,7 +46,8 @@ class ConsoleView:
             self.controller.see_specific_tournament(tournament)
         elif option == "4":
             self.controller.see_participants_in_tournament(tournament)
-        self.show_main_menu()
+        elif option == "5":
+            self.controller.show_tournament_rounds_and_matches(tournament)
 
     def show_tournament_options(self, option):
         print("Please choose one of the following options:")
@@ -56,7 +67,7 @@ class ConsoleView:
         print("Please choose one of the following options:")
         print("1. List of all players, sorted alphabetically")
         print("2. List of all tournaments")
-        print("3. See name and date of a specific tournament")
+        print("3. See name and dates of a specific tournament")
         print("4. List of players participating in a tournament, sorted alphabetically")
         print("5. List of all rounds in a tournament and all matches in the round.")
 
@@ -68,6 +79,8 @@ class ConsoleView:
         elif user_choice == '3':
             self.show_tournament_options(user_choice)
         elif user_choice == '4':
+            self.show_tournament_options(user_choice)
+        elif user_choice == '5':
             self.show_tournament_options(user_choice)
         elif user_choice.lower() == 'q':
             print("Saindo...")

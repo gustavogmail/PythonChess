@@ -1,9 +1,7 @@
 import json
 
-from model.round import Round
 from model.player import Player
 from model.tournament import Tournament
-from model.match import Match
 from controller.player.player_controller import PlayerController
 from controller.tournament.tournament_controller import TournamentController
 from view.consoleview import ConsoleView
@@ -35,13 +33,7 @@ class ChessController:
 
     def show_tournament_rounds_and_matches(self, tournament_name):
         tournament = self.find_specific_tournament(tournament_name)
-        match1 = Match(tournament.players[0].name, 1, tournament.players[1].name, 0)
-        match2 = Match(tournament.players[2].name, 1, tournament.players[3].name, 0)
-        round1 = Round(name="Round1", start_datetime="2023-06-06")
-        round1.add_match(match1)
-        round1.add_match(match2)
-        round1.mark_as_finished()
-        tournament.add_round(round1)
+        tournament = self.tournament_controller.build_rounds(tournament)
         self.tournament_controller.show_tournament_rounds_and_matches(tournament)
 
     def find_specific_tournament(self, name):
@@ -64,20 +56,6 @@ class ChessController:
 
         return players
 
-    def instantiate_rounds(self, rounds_json) -> list[Round]:
-        rounds = []
-        for single_round in rounds_json:
-            matches = self.instantiate_matches(single_round["matches"])
-            current_round = Round(
-                name=single_round["name"],
-                matches=matches,
-                start_datetime=single_round["start_datetime"],
-                end_datetime=single_round["end_datetime"]
-            )
-            rounds.append(current_round)
-
-        return rounds
-
     def read_tournaments_from_database(self) -> list[Tournament]:
         tournaments_on_database = []
         with open("./database/tournament.json", "r") as file:
@@ -98,6 +76,7 @@ class ChessController:
 
         return tournaments_on_database
 
+    # TODO: Create the logic to a new turn
     @staticmethod
     def execute_new_round():
-        print("Método para executar nova rodada")
+        print("Method to execute new turn")
